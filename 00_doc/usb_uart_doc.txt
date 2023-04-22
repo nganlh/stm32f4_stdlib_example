@@ -1,0 +1,7 @@
+1. >> lsusb
+2. >> modprobe usbserial vendor=0xXXXX product=0xXXXX
+3. >> sudo dmesg | grep 'ttyUSB'
+   -> Re-connect the USB cable.
+4. >> sudo chmod 777 /dev/ttyUSB0
+5. >> cu -l /dev/ttyUSB0 -s (BAUDRATE)
+   Ex: cu -l /dev/ttyUSB0 -s 9600
